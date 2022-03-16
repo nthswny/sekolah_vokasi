@@ -1,0 +1,49 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+void main() {
+  runApp(const VokasiApp());
+}
+
+class VokasiApp extends StatelessWidget {
+  const VokasiApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Material App',
+      home: Scaffold(
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset('assets/vokasi_logo-white.png'),
+              const SizedBox(
+                height: 25,
+              ),
+              Text(
+                'Sekolah Vokasi',
+                style: GoogleFonts.poppins(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              Text(
+                'Unggul, Mandiri, & Berkarakter',
+                style: GoogleFonts.poppins(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+      theme: ThemeData(scaffoldBackgroundColor: const Color(0xffEE8301)),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
